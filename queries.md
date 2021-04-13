@@ -1,13 +1,3 @@
-![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
-
-# Answers
-
-- **`query`**: /_You should copy/paste the query in here_/
-- **`projection`**: /_You should copy/paste the projection in here_/
-- **`sort`**: /_You should copy/paste the sort in here_/
-- **`skip`**: /_You should copy/paste the skip in here_/
-- **`limit`**: /_You should copy/paste the limit in here_/
-
 ### 1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.
 
 - **`query`**: {name: "Babelgum"}
@@ -80,11 +70,9 @@
 
 ### 15. All the companies that have been founded on the first seven days of the month, including the seventh. Sort them by their `acquisition price` in a descending order. Limit the search to 10 documents.
 
-- **`query`**: /_You should copy/paste the query in here_/
-- **`projection`**: /_You should copy/paste the projection in here_/
-- **`sort`**: /_You should copy/paste the sort in here_/
-- **`skip`**: /_You should copy/paste the skip in here_/
-- **`limit`**: /_You should copy/paste the limit in here_/
+- **`query`**: {founded_day: {$lte: 7} }
+- **`sort`**: {"acquisition.price_amount": -1}
+- **`limit`**: 10
 
 ### 16. All the companies on the 'web' `category` that have more than 4000 employees. Sort them by the amount of employees in ascending order.
 
